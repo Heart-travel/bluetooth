@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">HelloWorld</string>
+    <string name="app_name">Control Bar</string>
     <string name="notification">开启通知</string>
     <string name="alarm">开启闹铃</string>
     <string name="vib">开启震动</string>
+    <string name="button">Send Message</string>
+    <string name="hint">Type something here</string>
 
 </resources>

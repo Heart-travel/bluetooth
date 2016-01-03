@@ -4,17 +4,23 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.EditText;
 
 public class MainActivity extends Activity {
-
+private EditText editText;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		editText = (EditText) findViewById(R.id.edit_text);
 		
 		//获取CheckBox实例
 		CheckBox vib = (CheckBox)this.findViewById(R.id.vib);
@@ -28,6 +34,16 @@ public class MainActivity extends Activity {
 		                        arg1?"选中了":"取消了选中"    , Toast.LENGTH_LONG).show();
 		            }
 		 });
+		
+		Button button1 = (Button) findViewById(R.id.button_1);
+		button1.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				String inputText = editText.getText().toString();
+                Toast.makeText(MainActivity.this, 
+                		inputText + "sent", Toast.LENGTH_LONG).show();
+			}
+		});
 	}
 
 	@Override
