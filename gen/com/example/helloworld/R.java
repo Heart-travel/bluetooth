@@ -31,6 +31,11 @@ public final class R {
         public static final int setting_list_middle=0x7f020006;
         public static final int setting_list_top=0x7f020007;
     }
+    public static final class id {
+        public static final int alarm=0x7f080001;
+        public static final int notification=0x7f080000;
+        public static final int vib=0x7f080002;
+    }
     public static final class layout {
         public static final int activity_main=0x7f030000;
     }

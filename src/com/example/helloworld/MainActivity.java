@@ -4,6 +4,10 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.Toast;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 
 public class MainActivity extends Activity {
 
@@ -11,6 +15,19 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		//获取CheckBox实例
+		CheckBox vib = (CheckBox)this.findViewById(R.id.vib);
+		//绑定监听器
+		vib.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+
+		            @Override
+		            public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
+		                // TODO Auto-generated method stub
+		                Toast.makeText(MainActivity.this, 
+		                        arg1?"选中了":"取消了选中"    , Toast.LENGTH_LONG).show();
+		            }
+		 });
 	}
 
 	@Override

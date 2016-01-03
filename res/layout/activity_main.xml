@@ -18,6 +18,7 @@
 	        android:text="@string/notification"
 	        />
 	    <CheckBox 
+	        android:id="@+id/notification"
 	        style="@style/MyCheckBox"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"/>
@@ -36,7 +37,8 @@
 	        android:text="@string/alarm"
 	        />
 	    <CheckBox 
-	       style="@style/MyCheckBox"
+	        android:id="@+id/alarm"
+	        style="@style/MyCheckBox"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"/>
     </LinearLayout>
@@ -54,6 +56,7 @@
 	        android:text="@string/vib"
 	        />
 	    <CheckBox 
+	        android:id="@+id/vib"
 	        style="@style/MyCheckBox"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"/>
